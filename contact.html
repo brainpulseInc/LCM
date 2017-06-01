@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact - Life Coach Montréal</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="60x60" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- <script src="./js/jquery.min.js"></script> -->
+    <script type='text/javascript' src="./js/form_c.js"></script>
+    <script type='text/javascript' src="./js/form_course.js"></script>
+    <script src="./js/scripts.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+
+<body id="contact">
+<header>
+    <div class="top">
+        <a href="./index.html" class="logo">Life Coach Montreal</a>
+        <nav class="main-menu hidden-xs hidden-sm">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./my-story.html">My story</a></li>
+                <li><a href="./coaching.html">Coaching</a></li>
+                <li><a href="./testimonials.html">Testimonials</a></li>
+                <!--<li><a href="./press.html">Press</a></li>-->
+                <!--<li><a href="./blog.html">Blog</a></li>-->
+                <li><a class="active" href="./contact.html">Contact</a></li>
+                <!--<li class="lang"><a href="#">FR</a></li>-->
+            </ul>
+        </nav>
+        <a class="button-menu tcon tcon-menu--xcross visible-xs visible-sm" aria-label="toggle menu">
+            <span class="tcon-menu__lines" aria-hidden="true"></span>
+            <span class="tcon-visuallyhidden">toggle menu</span>
+        </a>
+        <nav class="main-menumobile visible-xs visible-sm">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./my-story.html">My story</a></li>
+                <li><a href="./coaching.html">Coaching</a></li>
+                <li><a href="./testimonials.html">Testimonials</a></li>
+                <!--<li><a href="./press.html">Press</a></li>-->
+                <!--<li><a href="./blog.html">Blog</a></li>-->
+                <li><a class="active" href="./contact.html">Contact</a></li>
+                <!--<li class="lang"><a href="#">FR</a></li>-->
+            </ul>
+        </nav>
+    </div>
+
+
+</header>
+<main>
+    <div class="pictureSection right">
+        <img src="./img/header/contact.jpg" alt="">
+        <h1 class="text-center">Let's chat</h1>
+    </div>
+
+    <div class="contentSection">
+        <section class="grey-section">
+            <div class="container">
+                <div class="col-md-10 col-md-offset-1 text-center">
+                    <h2>IF you are ready to find balance in your career and personal life, let’s chat to see if I can help</h2>
+                    <h3 class="negative-margin">Complete the form below</h3>
+                </div>
+                <form action="send.php" method="post" id='contact_form' class="col-md-8 col-md-offset-2 text-left">
+                    <label><input id="firstname" name="firstname" type="text" placeholder="Your Name"><span>Your name</span></label>
+                    <label><input id="email" name="email" type="text" placeholder="Your email Address"><span>Your Email Address</span></label>
+                    <label><textarea id="message" name="message" placeholder="How can i help ?"></textarea><span>How can i help ?</span></label>
+                    <div id="recaptcha1" class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6LcRVAgUAAAAAMFSVTyCMqScLVsqHOc2QGKXoSEz"></div>
+                    <p id="returnmessage2"></p>
+                    <p class="cont-button"><button type="submit" id="send_message" disabled="disabled" style="opacity:0.4;" value="Let's chat">Let's chat</button></p>
+                </form>
+            </div>
+        </section>
+    </div>
+</main>
+<footer>
+    <div class="col-md-12 darkblue">
+        <section class="subscription vertical-center">
+            <div class="col-md-12 text-center">
+                <h3>Not ready to get in touch yet ?</h3>
+                <h4>Sign up to my free email course to start finding more balance in your life today</h4>
+                <!--
+<form action="free-course.php" method="post" id="freecourse">
+                    <input class="name" id="name" type="text" placeholder="Your Name">
+                    <input class="mail" id="mail" type="email" placeholder="Your Email Address">
+                    <script type="text/javascript">
+                        var RecaptchaOptions = {
+                           lang : 'en',
+                        };
+                    </script>
+                    <p class="cont-button"><button type="submit" value="Get more balanced" id="get_course">Get more balanced</button></p>
+                    <p id="returnmessage"></p>
+                </form>
+-->
+                 <form action="https://lifecoachmontreal.us14.list-manage.com/subscribe/post" method="POST" id="freecourse">
+            <input name="u" value="582e7400c4e816ece4a7c0bb4" type="hidden">
+            <input name="id" value="e42fbba148" type="hidden">
+            <input name="orig-lang" value="1" type="hidden">
+                <input class="name" id="MERGE2" name="MERGE2" type="text" placeholder="Your Name">
+                <input class="mail" id="MERGE0" autocapitalize="off" autocorrect="off" name="MERGE0" size="25" value="" type="email" placeholder="Your Email Address">
+                <p class="cont-button"><button type="submit" value="Get more balanced" id="get_course_test">Get more balanced</button></p>
+                <p id="returnmessage"></p>
+            </form>
+
+            </div>
+        </section>
+    </div>
+    <div class="col-md-12 darkblue copyright">
+        <div class="container">
+            <div class="col-md-8 col-md-offset-2">
+                <span>©2016 By Life Coach Montreal</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 blue">
+        <ul class="social">
+            <!-- <li><a class="fb" target="_blank" href="#">Facebook</a></li> -->
+            <li><a class="instagram" target="_blank" href="https://www.instagram.com/rmagani/">Instagram</a></li>
+            <!-- <li><a class="tw" target="_blank" href="#">Twitter</a></li> -->
+            <li><a class="linkedin" target="_blank" href="https://www.linkedin.com/in/rmagani">LinkedIn</a></li>
+        </ul>
+
+    </div>
+</footer>
+<script>
+    function recaptchaCallback() {
+
+        $('#send_message').removeAttr('disabled').css("opacity","1");
+    };
+    
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+   lang : 'en',
+};
+</script>
+</body>
+</html>
+
+
